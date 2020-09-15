@@ -1,34 +1,58 @@
 <html>
-<head>
-</head>
+  <body>
+    <div class="login">
+      <h1>Login</h1>
+      <label for="email"><b>Enter Email</b></label>
+      <input
+        type="text"
+        placeholder="Email"
+        name="email"
+        id="suyash"
+        oninput="onChangeEmail()"
+      /><br />
 
-<body>
-	<form>
-	<div class="login">
-        <h1>Login</h1>
-	<hr>
-	<label for="email"><b>Enter Email</b></label>
-	<input type="text" placeholder="Email" name="email"><br>
-        
-	<label for="pwd"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="pwd"><br>
-	
-        <button>Log in</button>
-        <button>Sign Up</button>
-      
-        <a href="Forgot password.html" class="forgot-password">Forgot password?</a>
-        </div>
+      <label for="pwd"><b>Password</b></label>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        name="pwd"
+        oninput="onChangePass()"
+      /><br />
 
+      <button onclick="onClickLogin()">Log in</button>
+      <button>Sign Up</button>
 
+      <a href="Forgot password.html" class="forgot-password"
+        >Forgot password?</a
+      >
+    </div>
 
-        <div class="alt">
-        <a href="Login page 2.html" id="login">Login</a>
-        <a href="Registration page.html" id="signup">Sign Up</a>
-        </div>
+    <div class="alt">
+      <a href="Login page 2.html" id="login">Login</a>
+      <a href="Registration page.html" id="signup">Sign Up</a>
+    </div>
+  </body>
 
+  <script>
+    function onClickLogin() {
+      // email = 'abc'
+      var email = document.getElementById("suyash").value;
 
-        </form>
+      if (email === "abc") {
+        window.location.href =
+          "https://www.google.com/search?q=google&oq=google&aqs=chrome..69i57j0l6j69i65.1630j0j7&sourceid=chrome&ie=UTF-8";
+      } else {
+        alert("Failure");
+      }
+    }
 
-</body>
+    function onChangeEmail() {
+      var email = document.getElementById("suyash").value;
+      console.log("hello: " + email);
+    }
 
-<html>
+    function onChangePass() {
+      console.log("pass");
+    }
+  </script>
+</html>
